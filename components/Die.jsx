@@ -1,7 +1,7 @@
 export default function Die(props) {
     return (
-        <p className="dice">
+        <button className="dice">
             {props.num}
-        </p>
+        </button>
     )
 }
