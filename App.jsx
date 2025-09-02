@@ -2,15 +2,21 @@ import Dice from './components/Die.jsx'
 
 export default function App() {
 
-    const diceValues = new Array(10).fill(Math.floor(Math.random() * 6) * 10)
+    const diceValues1 = new Array(5).fill().map(() => Math.floor(Math.random() * 6))
+    const diceValues2 = new Array(5).fill().map(() => Math.floor(Math.random() * 6))
 
-    const diceComponents = diceValues.map(val => {
-        return <Dice value={val}/>
+    const diceComponentsRow1 = diceValues1.map(val => {
+        return <Dice num={val}/>
+    })
+
+    const diceComponentsRow2 = diceValues2.map(val => {
+        return <Dice num={val}/>
     })
 
     return (
         <main>
-            {diceComponents}
+            <div>{diceComponentsRow1}</div>
+            <div>{diceComponentsRow2}</div>
         </main>
     )
 }
