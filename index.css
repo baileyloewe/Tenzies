@@ -85,13 +85,13 @@ button {
 
 }
 
-.roll-button {
+.button {
   font-size: 2rem;
   background-color: #5035FF;
   border: none;
   border-radius: 5px;
   padding: .5em 1.5em;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .held {
