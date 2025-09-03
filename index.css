@@ -94,7 +94,7 @@ button {
   margin-top: 2em;
 }
 
-.held {
+.dice.held {
   background-color: #59E391;
 }
 
