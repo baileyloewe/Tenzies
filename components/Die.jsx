@@ -1,6 +1,6 @@
 export default function Die(props) {
     return (
-        <button className={`dice ${props.isHeld ? "held" : null}`} onClick={() => props.handleClick(props.id)}>
+        <button className={`dice ${props.isHeld ? "held" : null}`} onClick={props.markDieHeld}>
             {props.value}
         </button>
     )

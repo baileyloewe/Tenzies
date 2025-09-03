@@ -7,10 +7,15 @@ export default function App() {
     const [dice, setDice] = useState(generateAllNewDice())
 
     const diceElements = dice.map(die => {
-        return <Dice key={die.id} id={die.id} value={die.value} isHeld={die.isHeld} handleClick={handleClick}/>
+        return <Dice 
+                    key={die.id} 
+                    value={die.value} 
+                    isHeld={die.isHeld} 
+                    markDieHeld={() => markDieHeld(die.id)}
+                />
     })
 
-    function handleClick(id) {
+    function markDieHeld(id) {
         setDice(prevDice => prevDice.map(die => die.id === id ? {...die, isHeld: true} : {...die}))
     }
 
