@@ -1,0 +1,9 @@
+services:
+  tenzies:
+    build: .
+    ports: 
+      - "${PORT:-3043}:${PORT:-3043}"
+    environment:
+      - PORT=${PORT:-3043}
+    container_name: tenzies
+
