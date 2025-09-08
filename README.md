@@ -1,12 +1,38 @@
-# React + Vite
+# Tenzies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based tenzies game.
 
-Currently, two official plugins are available:
+<img width="817" height="605" alt="image" src="https://github.com/user-attachments/assets/b9589dd0-a9b2-4678-8e09-0177736f6684" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Building
 
-## Expanding the ESLint configuration
+_Don't want to build the site locally?_ Visit the site here: [tenzies.baileyloewe.dev](https://tenzies.baileyloewe.dev)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Prerequisites
+
+- Docker and Docker Compose installed
+- **Windows users:** Git Bash or WSL required to run bash scripts
+
+## Quick Start
+
+**Note:** The port parameter is optional - if you don't specify one, it defaults to port 3042.  
+
+### Examples:
+
+#### Windows
+```bash
+bash start.sh
+```
+Custom port
+```bash
+bash start.sh 8080
+```
+
+#### Linux/Mac
+```bash
+./start.sh c
+```
+Custom port
+```bash
+./start.sh 8080
+```
