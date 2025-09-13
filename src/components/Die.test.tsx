@@ -1,3 +1,4 @@
+import React from "react"
 import { describe, test, expect } from 'vitest'
 import { screen, render } from "@testing-library/react"
 import Die from "./Die.jsx"

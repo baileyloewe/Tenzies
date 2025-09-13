@@ -1,14 +1,15 @@
-import Dice from './components/Die.jsx'
+import Die from './components/Die.jsx'
 import { useState, useEffect, useRef } from 'react'
 import { nanoid } from "nanoid"
 import Confetti from 'react-confetti'
+import React from 'react'
 
 export default function App() {
 
     const [dice, setDice] = useState(() => generateAllNewDice())
 
     const diceElements = dice.map(die => {
-        return <Dice 
+        return <Die 
                     key={die.id} 
                     value={die.value} 
                     isHeld={die.isHeld} 
@@ -16,16 +17,15 @@ export default function App() {
                 />
     })
 
-    const gameWon = dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0].value)
+    const gameWon = dice.every(die => die.isHeld) && dice.every(die => die.value === dice[0]?.value)
 
-    const btnRef = useRef(null)
+    const btnRef = useRef<HTMLButtonElement>(null)
 
     useEffect(() => {
-        gameWon && 
-        btnRef.current.focus()
+        gameWon && btnRef.current !== null && btnRef.current.focus()
     }, [gameWon])
 
-    function markDieHeld(id) {
+    function markDieHeld(id: string) {
         setDice(prevDice => prevDice.map(die => die.id === id ?
             {...die, isHeld: !die.isHeld} :
             die
